@@ -22,4 +22,6 @@ git diff <TAG-1> <TAG-2>		//Mostra as linhas modificadas/adicionadas/removida da
 
 git blame	//Mostra o responsavel por cada linha no codigo
 
+git branch //Cria uma branch 
 
+git checkout //Troca a branch master pela nova branch criada
