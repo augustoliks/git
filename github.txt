@@ -25,3 +25,5 @@ git blame	//Mostra o responsavel por cada linha no codigo
 git branch //Cria uma branch 
 
 git checkout //Troca a branch master pela nova branch criada
+
+git git checkout -b <nome_da_branch> //Cria uma branch e troca a branch master pela nova branch criada
