@@ -1,0 +1,29 @@
+git push origin teste		//
+git push origin testes					//Compartilha o arquivo para o git hub
+git commit						//abre o editor padrao para edicao do Commit	
+git checkout teste					//ir para branch teste
+git branch -d						//Apaga a branch
+git checkout						// ir para branch
+git branch teste					// Criar a branch teste
+git push origin master					//Sobe arquivo para o git
+git commit -m "teste"					//"summary", explicita a alteração feita
+git add teste						//Prepara o arquivo,
+vim teste						//criar arquivo
+ls -la							//verifica os arquivos
+cd BotTelegram/						//entra no repositorio
+git clone https://github.com/magaum/BotTelegram.git			//clona o repositorio 
+git config --global user.email						//verifica o email
+git config --global user.email "carlos.santos110@fatec.sp.gov.br"	//carlos.santos110@fatec.sp.gov.br
+git config --global user.name						//verifica o nome de usuario
+git config --global user.name "augustoliks"				//nome de usuario "posso colocar qualquer coisa"
+
+
+
+FINAL
+MEIO
+COMEÇO 
+
+areas do github
+makina || makina/git || github
+
+local		add	push
