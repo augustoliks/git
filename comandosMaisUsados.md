@@ -1,5 +1,5 @@
-        COMANDO                              |           DESCRIÇÃO
----------------------------------------------|------------------------------------------------------------------------- 
+COMANDO                                      |           DESCRIÇÃO
+---------------------------------------------|--------------------------------------------- 
 git init                                     | Transforma o diretorio em um repositorio GIT
 git ls-files	                             | Lista os arquivos controlados pelo git
 git status	                             | Mosta o estado atual do repositorio, arquivos estao sendo ou nao controlodos pelo git, que estao sendo==(track), nao sendo==(untracked)
