@@ -1,9 +1,21 @@
-#Adicionar ao final do .bashrc
-#source ~/.bash_profile
+# Para instalar o utilitário, execute:
 
-if [ -f /etc/bash_completion.d/git ]; then
-    . /etc/bash_completion.d/git
-fi
-GIT_PS1_SHOWDIRTYSTATE=true
+```
+$ sudo apt-get install git-core bash-completion
+```
 
-PS1='\u@\h:\w $(__git_ps1 "(%s)")\$ '
+# Verifique qual o caminho da instalação do autocomplete:
+
+```
+source /etc/bash_completion.d/git
+
+// ou
+
+source /usr/share/bash-completion/completions/git
+```
+
+# Para inicialização automática:
+
+```
+echo "source /etc/bash_completion.d/git" >> ~./bashrc
+```
