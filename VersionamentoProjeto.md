@@ -3,9 +3,13 @@
 Em um versionamento temos três tipos de branches:
 
 **Master**: Terá apenas as versões estáveis do projeto. As tags representarão versões do projeto;
+
 **Develop**: Centraliza todo o processo de desenvolvimento atual do projeto;
+
 **Features**: Branches isoladas, destinada a uma respectiva tarefa em específico do projeto. São criadas sempre a partir da Develop, e serão mergeadas sempre na Develop.
+
 **Hotfix**: São branches locais, geradas e posteriormente incorporadas na **Master**, criadas a fim de solucionar um bug que está presente uma versão em produção.
+
 **Release**: São branches locais, geradas na **Develop** e posteriormente incorporadas na **Master** e na **Develop**, servem para a criação de uma nova versão de produção, e a criação/atualização do arquivo CHANGES, responsável por expor o nome dos commits feito na versão de momento. 
 
 # Branch de Features
