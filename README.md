@@ -1,4 +1,4 @@
-# Git
+# git-studies
 
 Repositório para fins de estudo, criado para centralizar o conteúdo necessário para se adquirir uma proficiência com a ferramenta Git. 
 
