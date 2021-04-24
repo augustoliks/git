@@ -42,7 +42,6 @@ git checkout <NOME-DA-BRANCH>                           | Muda o ambiente para a
 git merge <NOME-DA-BRANCH>                              | Mescla as mudanças, **na branch atual**, as modificações feitas na branch indicada em `<NOME-DA-BRANCH>`
 git fetch                                               | Sincronizar as ramificações externas com o projeto local
 
-
 ## Acesso via chaves SSH/RSA
 
 - TDOO: RSA pra que??? 
@@ -69,97 +68,97 @@ Quando tiver trabalhando em equipe evite desenvolver no branch main pois poderá
 
 - Criação de uma **branch-feature**.
 
-```shell
-git checkout develop
-git pull origin develop
-git checkout -b ArrumandoLayout
+```bash
+$ git checkout develop
+$ git pull origin develop
+$ git checkout -b ArrumandoLayout
 ```
 
 - Incorporando tais modificações na **branch-develop**
 
-```shell
-git checkout develop
-git pull origin develop
-git merge --no-ff ArrumandoLayout
-git branch -d ArrumandoLayout
-git push origin develop
+```bash
+$ git checkout develop
+$ git pull origin develop
+$ git merge --no-ff ArrumandoLayout
+$ git branch -d ArrumandoLayout
+$ git push origin develop
 ```
 
 #### Criação de Branche de versão (Release Branch)
 
 - Criando branch local denominada *release-0.1.0*, apenas para fazer a versionamento. O bump-version é um shell script que irá pegar o nome de cada commit dado na respectiva versão, e criar um arquivo texto com o nome da versão e os commits, isto serve para deixam de uma maneira clara o que foi feita em cada versão.
 
-```shell
-git checkout develop
-git pull origin develop
-git checkout -b release-0.1.0
-git fetch origin --tags
-./bump-version.sh 0.1.0
+```bash
+$ git checkout develop
+$ git pull origin develop
+$ git checkout -b release-0.1.0
+$ git fetch origin --tags
 
-// Alterar arquivos de versão (pom.xml, etc...)
+# Documenta o que foi feito
+# Altera os arquivos de gerenciamento de build, como por exemplo: pom.xml (maven); rpm.spec (Pacotes RPM); e poetry.lock (Python) etc...
 
-git commit -a -m "Versão alterada para 0.1.0"
+$ git commit -a -m "Versão alterada para 0.1.0"
 ```
 
 - Inserindo na main
 
-```shell
-git checkout main
-git pull origin main
-git merge --no-ff release-0.1.0
-git push origin main
-git tag -a v0.1.0 -m "Versão 0.1.0"
-git push origin --tags
+```bash
+$ git checkout main
+$ git pull origin main
+$ git merge --no-ff release-0.1.0
+$ git push origin main
+$ git tag -a v0.1.0 -m "Versão 0.1.0"
+$ git push origin --tags
 ```
 
 - Feito o versionamento na main, é hora de incorporar tais commits que representarão a criação de nova versão
 
-```shell
-git checkout develop
-git merge --no-ff release-0.1.0
-git branch -d release-0.1.0
+```bash
+$ git checkout develop
+$ git merge --no-ff release-0.1.0
+$ git branch -d release-0.1.0
 ```
 
 #### Hotfix
 
 - Gerando branch de hotfix a partir da main
 
-```shell
-git checkout main
-git pull origin main
-git checkout -b hotfix-0.1.1
-git fetch origin --tags
+```bash
+$ git checkout main
+$ git pull origin main
+$ git checkout -b hotfix-0.1.1
+$ git fetch origin --tags
 
-// Faz as alterações necessárias
+# Faz as alterações necessárias
+# Documenta o que foi feito
+# Altera os arquivos de gerenciamento de build, como por exemplo: pom.xml (maven); rpm.spec (Pacotes RPM); e poetry.lock (Python) etc...
 
-./bump-version.sh 0.1.1
-
-git commit -a -m "Versão alterada 0.1.1"
+$ git commit -a -m "Versão alterada 0.1.1"
 ```
 
 - Incorporando hotfix na main
 
-```shell
-git checkout main
-git pull origin main
-git merge --no-ff hotfix-0.1.1
-git push origin main
-git tag -a v0.1.1 -m "hotfix-0.1.1 - Correção do bug X"
-git push origin --tags
+```bash
+$ git checkout main
+$ git pull origin main
+$ git merge --no-ff hotfix-0.1.1
+$ git push origin main
+$ git tag -a v0.1.1 -m "hotfix-0.1.1 - Correção do bug X"
+$ git push origin --tags
 ```
 
 - Integrando na develop.
 
-```shell
-git checkout develop
-git pull origin develop
-git merge --no-ff hotfix-0.1.1
+```bash
+$ git checkout develop
+$ git pull origin develop
+$ git merge --no-ff hotfix-0.1.1
 ```
 
 - Caso há branch do tipo **release**. Elas também deverão incorporar as alterações da hotfix.
 
-```shell
-git branch -d hotfix-0.1.1
+```bash
+$ git branch -d hotfix-0.1.1
 ```
 
 ## Plataformas 
