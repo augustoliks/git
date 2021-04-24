@@ -4,7 +4,7 @@ Repositório para fins de estudo, criado para centralizar o conteúdo necessári
 
 O presente conteúdo deste projeto, foca em ser objetivo pra quem lê. As explicações visam atender o básico necessário para compreender os benefícios das quais se propõem.
 
-O repositório é uma iniciativa aberta, sem vinculos profissionais, Pull Requests são bem vindos!
+O repositório é uma iniciativa de estudos, para a criação de contéudo de forma colaborativa, Pull Requests são bem vindos!
 
 # Introdução 
 
