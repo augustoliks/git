@@ -40,6 +40,8 @@ git push origin main                                    | Envia as modificaçõe
 git checkout -b <NOME-DA-BRANCH>                        | Cria uma nova ramificação a partir da branch atual
 git checkout <NOME-DA-BRANCH>                           | Muda o ambiente para a branch especificada. Para mudar o ambiente, é necessário que todos os arquivos estejam no estado 
 git merge <NOME-DA-BRANCH>                              | Mescla as mudanças, **na branch atual**, as modificações feitas na branch indicada em `<NOME-DA-BRANCH>`
+git fetch                                               | Sincronizar as ramificações externas com o projeto local
+
 
 ## Acesso via chaves SSH/RSA
 
