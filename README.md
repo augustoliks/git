@@ -33,8 +33,7 @@ git log                                                 | Verifica o histórico 
 git log --graph --decorate                              | Verifica o histórico de commits, em visualização de gráficos de linha temporal, levando em considerações o histórico de ramificações do projeto 
 git clone <URL-DO-PROJETO>                              | Baixa o projeto existente em um servidor remoto
 git branch                                              | Lista as branches locais presentes no projeto
-git branch -a                                           | Lista todas as branches presentes no projeto, levando em consideração, branches presente no respositório remoto
-git branch -a                                           | Lista todas as branches presentes no projeto, levando em consideração, branches remotas
+git branch -a                                           | Lista todas as branches presentes no projeto, levando em consideração as branches remotas
 git remote add origin <URL-REPOSITORIO-REMOTO>          | Associa o versionamento com um repositório remoto centralizado. O parâmetro `origin`, é um apelido de associação para o repositório externo
 git push origin main                                    | Envia as modificações (*patch*) locais, ou seja, as que estão em estado `head`, para repositório externo
 git checkout -b <NOME-DA-BRANCH>                        | Cria uma nova ramificação a partir da branch atual
