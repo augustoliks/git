@@ -8,4 +8,6 @@ O presente conteúdo deste projeto, foca em ser objetivo pra quem lê. As explic
 
 Este repositório é uma iniciativa para a criação de contéudo de forma colaborativa, Pull Requests são bem vindos!
 
-Para acessar o conteúdo, acessar esse link: https://augustoliks.github.io/git-studies/
+---
+
+**Para acessar o conteúdo, acessar esse link**: https://augustoliks.github.io/git-studies/ 

@@ -15,3 +15,6 @@ jobs:
           python-version: 3.x
       - run: pip3 install -r requirements.txt
       - run: mkdocs gh-deploy --force
+
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
