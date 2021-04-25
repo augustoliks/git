@@ -1,0 +1,3 @@
+mkdocs
+mkdocs-toc-sidebar-plugin
+mkdocs-material
