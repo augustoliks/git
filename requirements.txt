@@ -1,3 +1,4 @@
 mkdocs
 mkdocs-toc-sidebar-plugin
 mkdocs-material
+git+https://github.com/carlosperate/mkdocs-awesome-list-plugin

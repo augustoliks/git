@@ -1,4 +1,4 @@
-TODO: badge para pages
+[![Github Pages](https://github.com/augustoliks/git-studies/actions/workflows/ci.yml/badge.svg?branch=main&event=page_build)](https://github.com/augustoliks/git-studies/actions/workflows/ci.yml)
 
 # git-studies
 
