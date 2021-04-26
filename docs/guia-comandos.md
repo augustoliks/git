@@ -138,15 +138,7 @@ git branch
 
 ---
 
-Lista todas as branches presentes no projeto, levando em consideração, branches presente no respositório remoto
-
-```bash
-git branch -a                                           
-```
-
----
-
-Lista todas as branches presentes no projeto, levando em consideração, branches remotas
+Lista todas as branches presentes no projeto, levando em consideração as branches remotas
 
 ```bash
 git branch -a                                           
