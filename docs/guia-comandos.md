@@ -7,6 +7,7 @@ Indica o nome da pessoa que esta fazendo as alterações no projeto
 ```console
 git config --global user.email "carlos.neto.dev@gmail" 
 ```
+
 ---
 
 Indica o editor de texto que o git irá abrir quando for necessário escrever alguma mensagem  
