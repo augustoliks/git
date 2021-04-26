@@ -20,6 +20,22 @@ theme:
   name: material
   logo: img/git-logo.svg
   favicon: img/git-logo.svg
+  palette:
+    - scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/lightbulb-outline
+        name: Light Mode
+    - scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/lightbulb
+        name: Dark Mode
+  features:
+    - search.suggest
+    - search.highlight
 
 extra:
   social:
@@ -27,3 +43,7 @@ extra:
       link: https://github.com/augustoliks
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/c-neto
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
