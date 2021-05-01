@@ -1,4 +1,4 @@
-# Sobre o git-studies
+# Bem vindo ao git-studies
 
 Repositório para fins de estudo, criado para centralizar o conteúdo necessário para se adquirir proficiência com a ferramenta Git. 
 
