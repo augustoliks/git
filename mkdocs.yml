@@ -4,22 +4,28 @@ site_description: Material de estudos Git
 site_author: Carlos Neto | @augustoliks
 repo_name: augustoliks/git-studies
 repo_url: https://github.com/augustoliks/git-studies
-edit_uri: ''
+# edit_uri: ''
 
 nav:
-  - Sobre o Projeto: index.md
-  - O que é Git?: o-que-e-git.md 
-  - Guia de Comandos: guia-comandos.md
-  - Gitlab: gitlab.md
-  - Git Flow: git-flow.md
-  - Gitlab: gitlab.md
-  - Referencias: referencias.md
+  - index: about.md
+  - Git:
+    - git/about.md
+    - git/comandos.md
+  - Workflows: 
+    - workflows/about.md
+    - workflows/git-flow.md
+    - workflows/github-flow.md
+    - workflows/gitlab-flow.md
+  - Plataformas: 
+    - plataformas/about.md
+    - plataformas/github.md
+    - plataformas/gitlab.md
 
 theme:
   language: pt
   name: material
-  logo: img/git-logo.svg
-  favicon: img/git-logo.svg
+  logo: git-logo.svg
+  favicon: git-logo.svg
   palette:
     - scheme: default
       primary: teal

@@ -6,10 +6,10 @@
 
 TODO: Transcrever o conteudo
 
-![](img/gitlab-flow.png)
+![](plataformas/img/gitlab-flow.png)
 
 ## Gitlab-Components
 
 TODO: Transcrever o conteudo
 
-![](img/gitlab-components.png)
+![](plataformas/img/gitlab-components.png)
