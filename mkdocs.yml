@@ -4,7 +4,7 @@ site_description: Material de estudos Git
 site_author: Carlos Neto | @augustoliks
 repo_name: augustoliks/git-studies
 repo_url: https://github.com/augustoliks/git-studies
-# edit_uri: ''
+edit_uri: ''
 
 nav:
   - index: about.md
