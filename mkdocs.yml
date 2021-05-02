@@ -8,8 +8,12 @@ edit_uri: ''
 
 nav:
   - Git:
-    - git/about.md
-    - git/comandos.md
+    - Conceitos: git/about.md
+    - CLI - Configuração: git/cli-config.md
+    - CLI - Mudança de Estados: git/cli-state.md
+    - CLI - Operações de Ramificaçẽos: git/cli-branch.md
+    - CLI - Operações Remotas: git/cli-remote.md
+    - CLI - Consultas: git/cli-logs.md
   - Workflows: 
     - workflows/about.md
     - workflows/git-flow.md
@@ -41,7 +45,7 @@ theme:
   features:
     - search.suggest
     - search.highlight
-
+    - navigation.top
 extra:
   social:
     - icon: fontawesome/brands/github-alt
@@ -52,3 +56,7 @@ extra:
 markdown_extensions:
   - pymdownx.highlight
   - pymdownx.superfences
+  - admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
