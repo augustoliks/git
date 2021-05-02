@@ -187,7 +187,7 @@ git merge <NOME-DA-BRANCH>
 
 ---
 
-Sincronizar as ramificações externas com o projeto local
+Sincronizar as ramificações externas com o projeto local.
 
 ```console
 git fetch                                               
