@@ -14,3 +14,4 @@ Em 2002, foi adotado a tecnologia de DVSC proprietária [BitKeeper](http://www.b
 Assim, em 2005, sob os termos da licensa [GNU General Public License V](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html), o Git foi lançado. Com decorrer do tempo, houve inúmeras melhorias, porém as metas inicias foram preservadas.
 
 Atualmente o Git é a principal ferramenta de de controle de versão, principalmente os que se enquandram como Software Livre.
+
