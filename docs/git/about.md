@@ -6,7 +6,7 @@ A criação do Git teve origem no desenvolvimento do Kernel Linux. Durante os an
 
 Em 2002, foi adotado a tecnologia de DVSC proprietária [BitKeeper](http://www.bitkeeper.org/) para o controle do código fonte do Linux. Em 2005, a empresa que desenvolveu o BitKeeper, removeu  o acesso gratuito dos direitos autorais da ferramenta, fato que combinado as limitações da ferramenta, fez o BitKeeper foi ser desligado do projeto Linux. Nenhuma solução alternativa no mercado eram satisfatórias, em especial no quesito de performance no ato de mesclar as contribuições introduzidas no código. Tal fato, levou a comunidade de desenvolvedores do Linux, em especial Linus Torvalds, a criar uma solução que tinha como requisitos base, com os seguintes pontos:
 
-- **Fazer o Oposto do CVS**: Não cometer os mesmos erros que a solução existente [VCS](https://en.wikipedia.org/wiki/Concurrent_Versions_System);
+- **Fazer o Oposto do CVS**: Não cometer os mesmos erros que a solução existente [CVS](https://en.wikipedia.org/wiki/Concurrent_Versions_System);
 - **Desempenho**: Velocidade para integrar colaborações;
 - **Distribuído**: Coloborações não necessariamente centralizadas, assim como a clareza de como se fazer os processos, pontos positivos herdados da experiência com BitKeeper;
 - **Integridade**: Mecânismos internos para evitar o corrompimentos de arquivos;
