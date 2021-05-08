@@ -16,21 +16,21 @@ Sincronizar as referências externas com a base de dados local:
 git fetch                                               
 ```
 
-> :memo: Pode-se compreender em *Sincronizar Referências Externas* como atualizar a base local de versionamento com novas **branches** e **tags** criadas após o **clone** do projeto.
+> :memo: Pode-se compreender em *Sincronizar Referências Externas* como atualizar a Base Local de versionamento com novas **branches** e **tags** criadas após o **clone** do projeto.
 
 ---
 
-Associar a base local de a um repositório remoto. 
+Associar a Base Local de a um repositório remoto. 
 
 ```console
 git remote add <APELIDO-DO-REPOSITORIO-REMOTO> <URL-REPOSITORIO-REMOTO>          
 ```
 
-> :memo: O parâmetro `origin`, é um apelido de associação para o repositório externo. É possível ter mais do que um repositório externo vinculados a base local. 
+> :memo: O parâmetro <APELIDO-DO-REPOSITORIO-REMOTO>, é um apelido de associação para o repositório externo. Por convenção, o valor de para associar o repositório externo princial do projet é: `origin`. É possível ter mais do que um repositório externo vinculados a Base Local. 
 
 ---
 
-Enviar as alterações que estão no **status** `Commited` presentes na base local, para a base de um repositório remoto.
+Enviar as alterações que estão no **status** `Commited` presentes na Base Local, para a base de um repositório remoto.
 
 ```console
 git push <APELIDO-DO-REPOSITORIO-REMOTO> <NOME-DA-BRANCHE>                                    
@@ -40,7 +40,7 @@ git push <APELIDO-DO-REPOSITORIO-REMOTO> <NOME-DA-BRANCHE>
 
 ---
 
-Obter as alterações de um repositório externo com a base local.
+Obter as alterações de um repositório externo com a Base Local.
 
 ```console
 git pull origin main
@@ -50,5 +50,5 @@ git pull origin main
 
 :warning: **Observações Importantes**: 
 
-- O comando só terá efeito caso não tenha nenhum arquivo com o status `Untracked` na base local;
+- O comando só terá efeito caso não tenha nenhum arquivo com o status `Untracked` na Base Local;
 - Caso algum ;
