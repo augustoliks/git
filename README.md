@@ -37,7 +37,7 @@ A estruta dos arquivos do projeto está padronizada no seguinte *layout*:
 └── requirements.txt    # Dependencias Python, para utilização do MkDocs
 ```
 
-Para criar o ambiente de desenvolvimento, primeiro, certifique que os utilitários `make` e `python3-virtualenv` estejam instalados em seu sistema. Em seguida, com o projeto devidamente clonado em seu sistema, executar:
+Para criar o ambiente de desenvolvimento, primeiro, certifique que os utilitários `make` e `python3-virtualenv` estejam instalados em seu sistema. Em seguida, com o projeto devidamente clonado em seu sistema, e em seu diretório, executar:
 
 ```bash  
 make venv       # cria ambiente virtual python e instala o MkDocs e seus plugins
