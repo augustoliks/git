@@ -4,3 +4,4 @@ venv:
 
 serve:
 	venv/bin/mkdocs serve
+
