@@ -1,89 +1,69 @@
+> OK: `git init`, `git add`, `git rm`, `git mv`, `git commit`, `git sparse-checkout`, `git restore`, `git revert`
+> 
+> TODO: `git mv`, `git sparse-checkout`, `git restore`, `git revert`
+
 # Comandos de Mudanças de Status
 
-Indexa o arquivo indicado ao versionamento git, mudando o seu estágio do mesmo de `working-dir`/`untrack` para `index`
+Um arquivo pode estar três **areas**:
 
-```console
-git add <ARQUIVO>       	                            
-```
+- `Working Directory`: Não indexados na base local;
+- `INDEX` — *aka*: `Staging`: Prontos para serem indexados a base local;
+- `HEAD` — *aka*: `.git`: Indexados na base local.
+
+![](img/file-areas.png)
+
+Nestas áreas, um arquivo pode conter os seguintes **status**:
+
+- `Untracked`: Quando o arquivo está em `Working Directory`;
+- `Staged` — *aka* `Tracked`: Quando o arquivo está no `INDEX`.
+    - `Unmodified`: Arquivos no `INDEX` que não tiveram alterações entre *commits*;
+    - `Modified`: Arquivos no `INDEX`  que tiveram alterações entre *commits*;
+- `Commited` — *aka* `HEAD`: Arquivos indexados na base de dados do Git.
+
+![](img/file-status.png)
 
 ---
 
-Remove o arquivo do versionamento, mudando o seu estágio de `index` para `working-dir`/`untrack`
+Criar um `Working Directory`, ou seja um repositório Git:
 
-```console
-git rm <ARQUIVO>                                        
 ```
+git init 
+```
+
+> :memo: O comando irá criar o diretório `.git`, que é a base local do versionamento do projeto.
 
 ---
 
-Muda o estado do arquivo 
+Mudar o *status* do arquivo ou diretório de: `Untracked` para `Staged`
 
-Verifica o histórico de commits, com seu respectivo hash, autor e data   
+```console
+git add <ARQUIVO-OU-DIRETÓRIO>
+```
 
-```consoleindicado, de `index` para `head`. O parâmetro `-m` é necessário indicar uma mensagem que descreve a mudança que foi feita neste arquivo, se não indicado o parâmeto, será aberto o editor indicado no comando `git config --global core.editor $(which code)`
+> :memo: Caso informa o arquivo, será mudado status somente do mesmo, caso informado um diretório, será mudificado o status dos arquivos presentes neste de forma recursiva:
+
+---
+
+Mudar o *status* do **arquivo** de: `Staged` para `Untracked` 
+
+```console
+git rm --cached <ARQUIVO>                                        
+```
+
+Mudar o *status* do **diretório** de: `Staged` para `Untracked` 
+
+```console
+git rm -r --cached <DIRETÓRIO>                                        
+```
+
+> :memo: O parâmetro `--cached`, caso não informado, removerá o arquivo do sistema operacional, assim como o comando `rm` convencional do Linux
+
+---
+
+Mudar o *status* de `Staged` para `Commited`: 
 
 ```console
 git commit <ARQUIVO-OU-DIRETORIO> -m <MENSAGEM>         
 ```
 
----
-
-Adiciona um rótulo ao presente commit, ou seja, um atalho de alto nível a um determinado o commit. Funcional para indicar um ponto de interesse, como versões estáveis, versões de testes entre outras  
-
-```console
-git tag -a <NOME-DA-TAG>                                
-```
-
----
-
-Lista todas as tag's do projeto
-
-```console
-git tag		                                            
-```
-
-Lista as branches locais presentes no projeto
-
-```console
-git branch                                              
-```
-
----
-
-Lista todas as branches presentes no projeto, levando em consideração as branches remotas
-
-```console
-git branch -a                                           
-```
-
----
-
-Cria uma nova ramificação a partir da branch atual
-
-```console
-git checkout -b <NOME-DA-BRANCH>                        
-```
-
----
-
-Muda o ambiente para a branch especificada. Para mudar o ambiente, é necessário que todos os arquivos estejam no estado 
-
-```console
-git checkout <NOME-DA-BRANCH>                           
-```
-
----
-
-Mescla as mudanças, **na branch atual**, as modificações feitas na branch indicada em `<NOME-DA-BRANCH>`
-
-```console
-git merge <NOME-DA-BRANCH>                              
-```
-
----
-
-Mostra as linhas de modificados entra as tag's indicadas
-
-```console
-git diff <TAG-1> <TAG-2>                                
-```
+> :memo: O parâmetro `-m` indica uma mensagem que descreve a mudança que foi feita neste arquivo. Caso não seja indicado, será aberto o editor de texto, configurado no comando `git config core.editor`

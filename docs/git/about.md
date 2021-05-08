@@ -1,6 +1,6 @@
 # O Que é? Pra Que Serve?
 
-O Git é um [Sistema de Controle Versões](https://pt.wikipedia.org/wiki/Sistema_de_controle_de_vers%C3%B5es), criado para gerenciar fluxo de desenvolvimento de conteúdo, de forma objetiva, produtiva, performática e distribuída. Seu uso é amplo, tanto em projetos *OpenSource* ou Empresarias, principalmente os desenvolvidos de forma colaboradorativa. Atualmente, as linguagens C, Shell e Perl, predominam em seu código fonte, que está acessível no Github [https://github.com/git/git](https://github.com/git/git)
+O Git é um [Sistema de Controle Versões](https://pt.wikipedia.org/wiki/Sistema_de_controle_de_vers%C3%B5es), criado para gerenciar fluxos de desenvolvimento de conteúdo de arquivos digitais, de forma objetiva, produtiva, performática e distribuída. Seu uso é amplo, tanto em projetos *OpenSource* ou Empresarias, principalmente os desenvolvidos de forma colaboradorativa. Atualmente, as linguagens C, Shell e Perl, predominam em seu código fonte, que está acessível no Github [https://github.com/git/git](https://github.com/git/git)
 
 > :warning: Devido aos seus recursos, não é errado associar o Git com as seguintes siglas de definição de tecnologia: 
 >
@@ -8,6 +8,8 @@ O Git é um [Sistema de Controle Versões](https://pt.wikipedia.org/wiki/Sistema
 > - DVSC - *Distributed Source Control Management*; 
 > - SCM - *Source Control Management*; 
 > - RCS - *Revision Control System*.
+> 
+> Porém, é importante entender que o Git não se restringe a **exclusivamente** uma sigla, e as associações feitas, tem como base o contexto do qual está presente.
 
 ## Um Pouco da História
 
@@ -24,17 +26,23 @@ Assim, em 2005, sob os termos da licensa [GNU GPLv2](https://www.gnu.org/license
 
 Atualmente é a principal ferramenta de controle de versão, dominante nos projetos *OpenSource*.
 
-## Conceitos Fundamentais
+## Caracteristicas
 
-Será abordado alguns conceitos fundamentais, dos quais uma vez compreendidos, tornará mais fácil a utilização da ferramenta.
+- **Disponibilidade:** 
 
-### Commit == *Snapshot* de Estados
+Por mais que o Git se enquadre no formato [DVSC - *Distributed Source Control Management*](https://en.wikipedia.org/wiki/Distributed_version_control), boa parte de suas operações são locais. Quando um projeto com Git é clonado (baixado), a base de dados que contém os metadados do versionamento do projeto, ficam contidos no diretório `.git` na raiz do repositório. Neste é possível consultar o histórico sem a necessidade de conexão com um servidor centralizado.
+
+- **Segurança:** 
+
+Para preservar a integridade dos arquivos, os mesmos são submetidos a função criptográfica [SHA-1](https://pt.wikipedia.org/wiki/SHA-1), assim, corrompimentos de arquivos serção detectados pelo Git.
+
+- **Gerencia de Estados**: 
 
 A principal diferença entre o Git e as demais soluções existentes de VCS, é forma de como os dados são gerenciados.
 
 > :memo: Como soluções existentes, podemos citar por exemplo o [Subversion](https://subversion.apache.org/), [Perforce](https://www.perforce.com/solutions/version-control)e [Bazaar](https://bazaar.canonical.com/en/)
 
-Algumas das soluções existentes, faz o controle de versão armazenando dados como alterações em uma versão básica de cada arquivo. Segue o exemplo:
+Algumas das soluções existentes, fazem o controle de versões armazenando dados como alterações em uma versão básica de cada arquivo. Segue o exemplo:
 
 ![](img/dm-others.png)
 
@@ -45,31 +53,3 @@ Diferetemente do formato exibido acima, o Git trata seus dados como um **fluxo d
 O Git é inteligente ao ponto de manter a referência de um arquivo, caso não houver alterações no mesmo entre *commits*.
 
 Este formato, evita redundancia e possibilita benefícios como ramificações e controles de conflitos de forma eficiente e performática.
-
-### Operações Locais
-
-Por mais que o Git se enquadre no formato [DVSC - *Distributed Source Control Management*](https://en.wikipedia.org/wiki/Distributed_version_control), boa parte de suas operações são locais. Quando um projeto com Git é clonado (baixado), a base de dados que contém os metadados do versionamento do projeto, ficam contidos no diretório `.git` na raiz do repositório. Neste é possível consultar o histórico sem a necessidade de conexão com um servidor centralizado.
-
-### Integridade
-
-Para evitar corrompimento de arquivos, os mesmos são submetidos a função criptográfica [SHA-1](https://pt.wikipedia.org/wiki/SHA-1). 
-
-### Ciclo de Vida do Estado de Arquivo 
-
-Um arquivo pode estar três **areas**:
-
-- `Working Directory`: Não indexados na base local;
-- `INDEX` — *aka*: `Staging`: Prontos para serem indexados a base local;
-- `HEAD` — *aka*: `.git`: Indexados na base local.
-
-![](img/file-areas.png)
-
-Nestas áreas, um arquivo pode conter os seguintes **status**:
-
-- `Untracked`: Quando o arquivo está em `Working Directory`;
-- `Staged` — *aka* `Tracked`: Quando o arquivo está no `INDEX`.
-    - `Unmodified`: Arquivos no `INDEX` que não tiveram alterações entre *commits*;
-    - `Modified`: Arquivos no `INDEX`  que tiveram alterações entre *commits*;
-- `Commited` — *aka* `HEAD`: Arquivos indexados na base de dados do Git.
-
-![](img/file-status.png)

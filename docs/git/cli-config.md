@@ -1,181 +1,42 @@
-# Comandos de Configuração 
+# Configuração Local
 
-Indica o nome da pessoa que esta fazendo as alterações no projeto
+O comando `git config` faz a personalização local do utilitário. Com ele é possível definir o nome e email do autor que introduz as colaborações, o editor de texto que o git vai chamar quando algum comando precisar de uma entrada de texto, entre outras funcionalidades.
+
+Se o comando `git config` for executado com o argumento `--system`, os valores serão formatados e salvos no arquivo `/etc/gitconfig`. Assim, todos os usuários do sistema terão as informações contidos neste como padrão. Caso o argumento passado for `--global`, os valores serão salvos em `~/.gitconfig`, e valerão como padrão para o usuário de sistema do qual o executou. Caso não for passado nenhum dos argumentos citados, e o usuário estiver em um **Working Directory**, ou seja, em repositório local, o arquivo alterado será o `.git/config`.
+
+Assim, a ordem de sobrescrita dos metadados do `git config`, se dá pela seguinte ordem:
+
+- `/etc/gitconfig`: Base de valores à nivel *System Wide*, ou seja, para todos os usuários;
+- `~/.gitconfig`: Valores a nível de Usuário de Sistema - Sobrescreve o `/etc/gitconfig`;
+- `.git/config`: Valores a nível de projeto - Sobrescreve o `/etc/gitconfig` e `~/.gitconfig`.
+
+----
+
+Indicar o nome da pessoa que esta fazendo as alterações no projeto:
 
 ```console
-git config --global user.email "carlos.neto.dev@gmail" 
+git config user.email "carlos.neto.dev@gmail" 
 ```
+
+> :memo: O valor `"carlos.neto.dev@gmail"` é o nome exemplo do usuário
 
 ---
 
-Indica o editor de texto que o git irá abrir quando for necessário escrever alguma mensagem  
+Indicar o nome da pessoa que esta fazendo as alterações no projeto:
 
 ```console
-git config --global core.editor $(which code)
+git config --global user.name "Carlos Neto"
 ```
+
+> :memo: O valor `"Carlos Neto"` é o nome exemplo do usuário
 
 ---
 
-Indica que o diretório presente, será versionado com Git. Ao executar, será criado um diretório oculto `.git`, do qual será responsável por manter o estado do versionamento
+Indicar o editor de texto que o git irá chamar quando for necessário escrever alguma mensagem :
 
 ```console
-git init                                                
+git config core.editor /usr/bin/code --wait
 ```
 
----
+> :memo: O valor `/usr/bin/code` é o caminho ilustrativo de um VSCode. Este é o valor que deve ser alterado para o caminho absoluto do binário do editor de texto de sua preferência.
 
-Indica o nome da pessoa que esta fazendo as alterações no projeto. O parâmetro `--global` diz que a configuração será para todos os arquivos da máquina, caso não tenha, a configuração valeria apenas para o projeto em questão 
-
-```console
-git config --global user.name "Carlos Neto"             
-```
-
-# Comandos de Consulta
-
-Mostra as linhas de modificados entra as tag's indicadas
-
-```console
-git diff <TAG-1> <TAG-2>                                
-```
-
----
-
-Verifica o histórico de commits, com seu respectivo hash, autor e data   
-
-```console
-git log                                                 
-```
-
----
-
-Verifica o histórico de commits, em visualização de gráficos de linha temporal, levando em considerações o histórico de ramificações do projeto 
-
-```console
-git log --graph --decorate                              
-```
-
----
-
-"O que mudou?", mosta as mudanças que ocorreram no arquivo indicado, tendo como base, os commits feitos no mesmo
-
-```console
-git whatchanged <ARQUIVO>	                            
-```
-
----
-
-Lista somente os arquivos que estão em estado `index`/`track`
-
-```console
-git ls-files	                                        
-```
-
-# Comandos de Operações Remotas
-
-Baixa o projeto existente em um servidor remoto
-
-```console
-git clone <URL-DO-PROJETO>                              
-```
-
----
-
-Associa o versionamento com um repositório remoto centralizado. O parâmetro `origin`, é um apelido de associação para o repositório externo
-
-```console
-git remote add origin <URL-REPOSITORIO-REMOTO>          
-```
-
----
-
-Envia as modificações (*patch*) locais, ou seja, as que estão em estado `head`, para repositório externo
-
-```console
-git push origin main                                    
-```
-
----
-
-Sincronizar as ramificações externas com o projeto local.
-
-```console
-git fetch                                               
-```
-
-# Comandos de Mudanças de Status
-
-Indexa o arquivo indicado ao versionamento git, mudando o seu estágio do mesmo de `working-dir`/`untrack` para `index`
-
-```console
-git add <ARQUIVO>       	                            
-```
-
----
-
-Remove o arquivo do versionamento, mudando o seu estágio de `index` para `working-dir`/`untrack`
-
-```console
-git rm <ARQUIVO>                                        
-```
-
----
-
-Muda o estado do arquivo indicado, de `index` para `head`. O parâmetro `-m` é necessário indicar uma mensagem que descreve a mudança que foi feita neste arquivo, se não indicado o parâmeto, será aberto o editor indicado no comando `git config --global core.editor $(which code)`
-
-```console
-git commit <ARQUIVO-OU-DIRETORIO> -m <MENSAGEM>         
-```
-
----
-
-Adiciona um rótulo ao presente commit, ou seja, um atalho de alto nível a um determinado o commit. Funcional para indicar um ponto de interesse, como versões estáveis, versões de testes entre outras  
-
-```console
-git tag -a <NOME-DA-TAG>                                
-```
-
----
-
-Lista todas as tag's do projeto
-
-```console
-git tag		                                            
-```
-
-Lista as branches locais presentes no projeto
-
-```console
-git branch                                              
-```
-
----
-
-Lista todas as branches presentes no projeto, levando em consideração as branches remotas
-
-```console
-git branch -a                                           
-```
-
----
-
-Cria uma nova ramificação a partir da branch atual
-
-```console
-git checkout -b <NOME-DA-BRANCH>                        
-```
-
----
-
-Muda o ambiente para a branch especificada. Para mudar o ambiente, é necessário que todos os arquivos estejam no estado 
-
-```console
-git checkout <NOME-DA-BRANCH>                           
-```
-
----
-
-Mescla as mudanças, **na branch atual**, as modificações feitas na branch indicada em `<NOME-DA-BRANCH>`
-
-```console
-git merge <NOME-DA-BRANCH>                              
-```

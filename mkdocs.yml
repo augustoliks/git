@@ -9,11 +9,13 @@ edit_uri: ''
 nav:
   - Git:
     - Conceitos: git/about.md
-    - CLI - Configuração: git/cli-config.md
-    - CLI - Mudança de Estados: git/cli-state.md
-    - CLI - Operações de Ramificaçẽos: git/cli-branch.md
-    - CLI - Operações Remotas: git/cli-remote.md
-    - CLI - Consultas: git/cli-logs.md
+    - CLI: 
+      - git/cli.md
+      - Configuração: git/cli-config.md
+      - Mudança de Estados: git/cli-state.md
+      - Ramificações: git/cli-branch.md
+      - Operações Remotas: git/cli-remote.md
+      - Consultas: git/cli-logs.md
   - Workflows: 
     - workflows/about.md
     - workflows/git-flow.md
@@ -34,14 +36,14 @@ theme:
       primary: teal
       accent: amber
       toggle:
-        icon: material/lightbulb-outline
-        name: Light Mode
+        icon: material/lightbulb
+        name: Dark Mode
     - scheme: slate
       primary: teal
       accent: amber
       toggle:
-        icon: material/lightbulb
-        name: Dark Mode
+        icon: material/lightbulb-outline
+        name: Light Mode
   features:
     - search.suggest
     - search.highlight

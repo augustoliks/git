@@ -4,11 +4,11 @@
 
 Repositório para fins de estudo, criado para centralizar o conteúdo necessário para se adquirir proficiência com a ferramenta Git. 
 
-O presente conteúdo deste projeto, foca em ser objetivo pra quem lê. As explicações visam atender o básico necessário para compreender como se utliza a ferramenta, assim seu benefício.
+O presente conteúdo deste projeto, foca em ser objetivo pra quem lê. As explicações visam atender o básico necessário para compreender como se utliza a ferramenta, assim como os seus benefícios.
 
 Este repositório é uma iniciativa para a criação de contéudo de forma colaborativa, Pull Requests são bem vindos!
 
-- **Para acessar o conteúdo, acessar esse link**: https://augustoliks.github.io/git-mini-book/ 
+**O projeto está em desenvolvimento**, porém o atual conteúdo está acessível em: https://augustoliks.github.io/git-mini-book/ 
 
 ## Guia de Colaboração
 
@@ -43,3 +43,7 @@ Para criar o ambiente de desenvolvimento, primeiro, certifique que os utilitári
 make venv       # cria ambiente virtual python e instala o MkDocs e seus plugins
 make serve      # cria um servidor web para acompanhamento dinamico das mudanças feitas localmente 
 ```
+
+Após este processo, o conteúdo estará disponível localmente, em http://127.0.0.1:8000/
+
+O ambiente de desenvolvimento contém compilição de estáticos de forma dinâmica.
