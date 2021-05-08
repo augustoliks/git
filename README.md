@@ -13,3 +13,37 @@ Este repositório é uma iniciativa para a criação de contéudo de forma colab
 **Para acessar o conteúdo, acessar esse link**: https://augustoliks.github.io/git-mini-book/ 
 
 ---
+
+## Guia de Colaboração
+
+O conteúdo do `git-mini-book` é criado sob a formatação [Markdown](https://pt.wikipedia.org/wiki/Markdown), e os arquivos estáticos são gerados com o framework [MkDocs](https://www.mkdocs.org/).
+
+A estruta dos arquivos do projeto está padronizada no seguinte *layout*:
+
+```shell
+.
+├── docs                # Diretório base dos conteúdos do git-mini-book 
+│   ├── index.md        # Página inicial do projeto
+│   ├── git             # Diretório com o conteúdo da seção: Git
+│   │   ├── *.md        # Arquivos seperados conforme as subseções
+│   │   └── img         # Diretório de imagens
+│   │       └── ...     # Imagens utilizadas nos exemplos
+│   ├── plataformas     # Diretório com o conteúdo da seção: Plataformas
+│   │   ├── *.md        # Arquivos seperados conforme as subseções
+│   │   └── img         # Diretório de imagens
+│   │       └── ...     # Imagens utilizadas nos exemplos
+│   └── workflows       # Diretório com o conteúdo da seção: Workflows
+│       ├── *.md        # Arquivos seperados conforme as subseções
+│       └── img         # Diretório de imagens
+│           └── ...     # Imagens utilizadas nos exemplos
+├── Makefile            # Configuração do ambiente de desenvolvimento, com compilação dinámica de arquivos estáticos   
+├── mkdocs.yml          # Arquivo de definição de estrutura de página do framework MkDocs 
+└── requirements.txt    # Dependencias Python, para utilização do MkDocs
+```
+
+Para criar o ambiente de desenvolvimento, primeiro, certifique que os utilitários `make` e `python3-virtualenv` estejam instalados em seu sistema. Em seguida, com o projeto devidamente clonado em seu sistema, executar:
+
+```console  
+make venv       # cria ambiente virtual python e instala o MkDocs e seus plugins
+make serve      # cria um servidor web para acompanhamento dinamico das mudanças feitas localmente 
+```
